@@ -1,0 +1,118 @@
+.content-item {
+    margin-top: 25px;
+    height: 41px;
+    font-size: 16px;
+}
+
+
+.content-item .key {
+    float: left;
+    width: 122px;
+    text-align: left;
+    color: #2c3e50;
+}
+
+.content-item .value {
+    display: block;
+    float: left;
+    width: 618px;
+    height: 41px;
+    color: #2c3e50;
+    text-align: left;
+}
+
+.content-item .update {
+    float: left;
+    color: #7f8c8d;
+}
+
+.shield {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.update-dialog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+
+    border: 1px solid #2c3e50;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.dialog-head {
+    position: relative;
+    height: 38px;
+    padding-top: 8px;
+    padding-left: 11px;
+
+    border-bottom: 1px solid #2c3e50;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.close:hover {
+    cursor: pointer;
+}
+
+.dialog-body {
+    padding: 20px 45px;
+}
+
+.dialog-body-item .hd {
+    float: left;
+    width: 70px;
+    height: 40px;
+    padding-right: 10px;
+    font-size: 16px;
+    text-align: right;
+    line-height: 40px;
+    background-color: #fff;
+}
+
+.dialog-body-item .bd {
+    float: left;
+    width: 300px;
+    height: 40px;
+    background-color: #fff;
+}
+
+.dialog-body-item .bd input {
+    display: block;
+    width: 290px;
+    height: 30px;
+    padding: 5px;
+    outline: none;
+}
+
+.dialog-body-item button {
+    float: left;
+    display: block;
+    margin-top: 10px;
+    width: 140px;
+    height: 40px;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #3498db;
+    outline: none;
+}
+
+
+.dialog-body-item .update {
+}
+
+.dialog-body-item .cancel {
+    float: right;
+}

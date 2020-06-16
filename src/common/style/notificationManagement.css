@@ -1,0 +1,16 @@
+.con-title {
+    width: 20%;
+}
+
+.summary {
+    width: 50%;
+    overflow: hidden;
+}
+
+.author {
+    width: 10%;
+}
+
+.operation {
+    width: 15%;
+}
