@@ -4,6 +4,7 @@ import store from '@/store'
 import router from '@/router'
 import {getToken} from "@/utils/auth";
 
+// 默认请求方式
 axios.defaults.headers['Content-Type'] = 'application/json;charset=utf-8';
 // 创建axios实例
 const service = axios.create({
@@ -15,6 +16,7 @@ const service = axios.create({
 // request拦截器
 service.interceptors.request.use(
     config => {
+        // 在请求头上添加token信息
         config.headers['Authorization'] = '' + getToken();
         return config
     },
@@ -29,7 +31,8 @@ service.interceptors.response.use(response => {
         const code = response.data.code;
         if (code < 200 || code > 300) {
             Notification.error({
-                title: response.data.msg
+                title: response.data.msg,
+                context: 'Request.js'
             });
             return Promise.reject('error')
         } else {

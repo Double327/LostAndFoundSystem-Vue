@@ -3,7 +3,7 @@ import Cookies from "js-cookie";
 const TokenKey = 'LAF-TOKEN';
 
 export function getToken() {
-    Cookies.get()
+    Cookies.get(TokenKey)
 }
 
 export function setToken(token) {

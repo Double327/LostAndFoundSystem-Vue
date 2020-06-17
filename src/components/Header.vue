@@ -44,7 +44,8 @@
             return {
                 user: {}
             }
-        }
+        },
+
     }
 </script>
 
