@@ -6,3 +6,18 @@ export function listUser(page) {
         method: 'get',
     })
 }
+
+export function register(username, password, email, uuid, code) {
+    const data = {
+        username,
+        password,
+        email,
+        uuid,
+        code
+    }
+    return request({
+        url: '/user/add',
+        method: 'post',
+        params: data
+    });
+}

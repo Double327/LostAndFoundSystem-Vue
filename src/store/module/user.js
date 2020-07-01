@@ -1,4 +1,5 @@
 import {login} from "@/api/login";
+import {register} from "@/api/user";
 import {setToken} from "@/utils/auth";
 
 const user = {
@@ -40,6 +41,21 @@ const user = {
                 }).catch(error => {
                     reject(error);
                 });
+            });
+        },
+        Register({commit}, userInfo) {
+            console.log(userInfo)
+            const username = userInfo.username;
+            const password = userInfo.password;
+            const email = userInfo.email;
+            const uuid = userInfo.uuid;
+            const code = userInfo.code;
+            return new Promise((resolve, reject) => {
+                register(username, password, email, uuid, code).then(res => {
+                    resolve();
+                }).catch(error => {
+                    reject(error);
+                })
             });
         }
     }

@@ -25,7 +25,7 @@
 			<div class="form-item">
 				<i class="iconfont icon">&#xe75b;</i>
 				<label>
-					<input type="text" class="text" v-model="verifyPassword" placeholder="请输入邮箱...">
+					<input class="text" placeholder="请输入邮箱..." type="text" v-model="registerForm.email">
 				</label>
 			</div>
 			<div class="form-item verifyCode">
@@ -36,14 +36,14 @@
 				</label>
 			</div>
 			<div class="form-item">
-				<button type="button">注册</button>
+				<button @click="register" type="button">注册</button>
 			</div>
 			<div class="form-item">
 				<button type="reset" @click="clearForm">重置</button>
 			</div>
 
 			<div class="form-item">
-				<a href="#" class="link-item">已有账户？</a>
+				<router-link class="link-item" tag="a" to="/login">已有账户？</router-link>
 				<router-link class="link-item" tag="a" to="/login">立即登录</router-link>
 			</div>
 		</form>
@@ -83,6 +83,13 @@
                 this.registerForm.password = "";
                 this.registerForm.code = "";
                 this.getCode();
+            },
+            register() {
+                this.$store.dispatch('Register', this.registerForm).then(() => {
+                    this.$router.push('/');
+                }).catch(() => {
+                    this.clearForm();
+                })
             }
         }
     }
