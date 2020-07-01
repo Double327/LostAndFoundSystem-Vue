@@ -9,7 +9,6 @@ import  store from "@/store"
 
 Vue.component('Pagination', Pagination);
 Vue.use(ElementUI);
-Vue.use(Notification);
 
 
 Vue.config.productionTip = false

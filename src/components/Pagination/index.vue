@@ -1,12 +1,12 @@
 <template>
 	<div :class="{'hidden':hidden}" class="pagination-container">
 		<el-pagination
-				@size-change="handleSizeChange"
-				@current-change="handleCurrentChange"
-				:current-page.sync="page"
+				:current-page.sync="currentPage"
 				:page-size="pageSize"
 				layout="prev, pager, next, jumper"
-				:total="total">
+				:total="total"
+				@current-change="handleCurrentChange"
+				@size-change="handleSizeChange">
 		</el-pagination>
 	</div>
 </template>
@@ -26,7 +26,7 @@
             },
             limit: {
                 type: Number,
-                default: 20
+                default: 9
             },
             pageSizes: {
                 type: Array,
@@ -81,6 +81,8 @@
                 if (this.autoScroll) {
                     scrollTo(0, 800)
                 }
+                this.$emit('reloadData');
+                console.log('切换页数--->' + val);
             }
         }
     }

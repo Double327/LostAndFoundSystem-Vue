@@ -4,20 +4,21 @@ export function addLafInfo(title, type, lostTime, lostPosition, summary) {
     const  data = {
         title,
         type,
-        lostTime: new Date(lostTime),
+        lostTime: lostTime,
         lostPosition,
         summary
     };
     return request({
         url: '/laf/add',
         method: 'post',
-        data: JSON.stringify(data)
+        params: data
     });
 }
 
-export function findAllLafInfo() {
+export function findLafInfoList(query) {
     return request({
         url: '/laf/list',
-        type: 'get'
+        type: 'get',
+        params: query
     });
 }

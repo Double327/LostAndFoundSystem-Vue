@@ -3,7 +3,7 @@
 		<div class="main box-shadow">
 			<div class="hd">
 				<div class="avatar">
-					<img alt="" src="img/avatar.jpg">
+					<img alt="" src="../../assets/img/avatar.jpg">
 				</div>
 				<div class="user-primary">
 					<p class="username">Double</p>
@@ -13,12 +13,24 @@
 			<div class="bd">
 				<div class="bd-nav">
 					<ul>
-						<li class="bd-nav-item"><a class="current" href="#">账户管理</a></li>
-						<li class="bd-nav-item"><a href="#">发布信息管理</a></li>
-						<li class="bd-nav-item"><a href="#">最新通知</a></li>
-						<li class="bd-nav-item"><a href="#">用户管理</a></li>
-						<li class="bd-nav-item"><a href="#">系统通知管理</a></li>
-						<li class="bd-nav-item"><a href="#">系统设置</a></li>
+						<li class="bd-nav-item">
+							<router-link class="current" tag="a" to="userInfo">账户管理</router-link>
+						</li>
+						<li class="bd-nav-item">
+							<router-link tag="a" to="releaseInfoManagement">发布信息管理</router-link>
+						</li>
+						<li class="bd-nav-item">
+							<router-link tag="a" to="userInfo">最新通知</router-link>
+						</li>
+						<li class="bd-nav-item">
+							<router-link tag="a" to="userList">用户管理</router-link>
+						</li>
+						<li class="bd-nav-item">
+							<router-link tag="a" to="userInfo">系统通知管理</router-link>
+						</li>
+						<li class="bd-nav-item">
+							<router-link tag="a" to="userInfo">系统设置</router-link>
+						</li>
 					</ul>
 				</div>
 				<div class="title">

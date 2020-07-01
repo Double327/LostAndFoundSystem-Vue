@@ -1,6 +1,6 @@
 <template>
 	<div class="header">
-		<a class="header-brand" href="#">失物招领系统</a>
+		<router-link class="header-brand" tag="a" to="/">失物招领系统</router-link>
 		<div class="nav left">
 			<ul>
 				<li class="nav-item">

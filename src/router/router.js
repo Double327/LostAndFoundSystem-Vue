@@ -6,7 +6,7 @@ import Login from "@/components/content/Login";
 import Register from "@/components/content/Register";
 import UserInfo from "@/components/content/UserInfo";
 import ReleaseLafInfo from "@/components/content/ReleaseLafInfo";
-import UserManagement from "@/components/content/UserManagement";
+import UserManagement from "@/components/content/UserList";
 
 export default [
     {

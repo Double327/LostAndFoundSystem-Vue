@@ -30,10 +30,6 @@ service.interceptors.request.use(
 service.interceptors.response.use(response => {
         const code = response.data.code;
         if (code < 200 || code > 300) {
-            Notification.error({
-                title: response.data.msg,
-                context: 'Request.js'
-            });
             return Promise.reject('error')
         } else {
             return response.data
@@ -43,7 +39,7 @@ service.interceptors.response.use(response => {
         try {
             code = error.response.data.code
         } catch (e) {
-            if (error.toString().indexOf('Error: timeout') !== -1) {
+            if (error.toString().indexOf('Error:  timeout') !== -1) {
                 Notification.error({
                     title: '网络请求超时',
                     duration: 2500
@@ -79,7 +75,7 @@ service.interceptors.response.use(response => {
             if (errorMsg !== undefined) {
                 Notification.error({
                     title: errorMsg,
-                    duration: 3000
+                    duration: 30000
                 })
             }
         }

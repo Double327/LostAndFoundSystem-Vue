@@ -12,9 +12,15 @@
 				<input class="" id="find" name="infoType" value="2" type="radio" v-model="lafInfo.type">
 			</div>
 			<div class="form-group">
-				<label for="lostTime">遗失时间</label>
-				<input class="form-item" id="lostTime" name="lostTime" placeholder="请输入遗失时间" type="text"
-				       v-model="lafInfo.lostTime">
+				<label for>遗失时间</label>
+				<el-date-picker
+						class="form-item"
+						id="lostTime"
+						name="lostTime"
+						placeholder="选择遗失时间"
+						type="datetime"
+						v-model="lafInfo.lostTime">
+				</el-date-picker>
 			</div>
 			<div class="form-group">
 				<label for="lostLocation">遗失地点</label>
@@ -62,7 +68,7 @@
         },
         methods: {
             release() {
-                addLafInfo(this.lafInfo.title, this.lafInfo.type, this.lafInfo.lostTime, this.lafInfo.lostPosition, this.lafInfo.summary).then(() => {
+                addLafInfo(this.lafInfo.title, this.lafInfo.type, this.lafInfo.lostTime.toString(), this.lafInfo.lostPosition, this.lafInfo.summary).then(() => {
                     Notification.success('提交成功!');
                     this.$router.push('/lafInfoList');
                 }).catch(() => {

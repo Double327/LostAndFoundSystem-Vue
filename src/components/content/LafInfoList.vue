@@ -1,38 +1,53 @@
 <template>
 	<div class="main clearfix">
 		<div class="content clearfix">
-			<div class="card" >
+			<div :key="item.id" class="card" v-for="item in list">
 				<div class="card-title">
-					<h3>这是标题</h3>
+					<h3>{{item.title}}</h3>
 				</div>
 				<div class="card-img">
 					<img alt="" src="../../assets/img/avatar.jpg">
 				</div>
 				<div class="card-summary">
-					<p>物品描述:<span>黑色皮质钱包，里面有银行卡、身份证等物品，另还有若干现金.</span></p>
+					<p>物品描述:<span>{{item.summary}}</span></p>
 				</div>
 				<div class="card-footer">
-					<p class="lost-time">丢失时间:<span>2000-11-11</span></p>
-					<p class="lost-location">丢失地点:<span>江苏省徐州市江苏师范大学14号楼</span></p>
-					<p class="author">发布人:<span>Double</span></p>
-					<p class="release-time">发布时间:<span>2000-12-4</span></p>
+					<p class="lost-time">丢失时间:<span>{{item.lostTime}}</span></p>
+					<p class="lost-location">丢失地点:<span>{{item.lostPosition}}</span></p>
+					<p class="author">发布人:<span>{{item.createBy}}</span></p>
+					<p class="release-time">发布时间:<span>{{item.createTime}}</span></p>
 				</div>
 			</div>
 		</div>
-		<pagination v-show="total>0" :total="total" :page.sync="queryParams.pageNum" :limit.sync="queryParams.pageSize"/>
+		<pagination :limit.sync="queryParams.pageSize" :page.sync="queryParams.pageNum" :total="total"
+		            @reloadData="reloadData" v-show="total>0"/>
 	</div>
 </template>
 
 <script>
+    import initData from "@/mixins/initData";
+    import {findLafInfoList} from "@/api/lafInfo";
+    import {Notification} from 'element-ui';
+
     export default {
         name: "LafInfoList",
+        mixins: [initData],
         data() {
             return {
-                total: 100,
-                queryParams: {
-                    pageNum: 10,
-                    pageSize: 6
-                }
+            }
+        },
+        created() {
+            this.reloadData();
+        },
+        methods: {
+            reloadData() {
+                findLafInfoList(this.queryParams).then(res => {
+                    console.log(res)
+                    this.list = res.rows;
+                    this.total = res.total;
+                }).catch(() => {
+                    Notification.error("数据加载失败！");
+                })
             }
         }
     }

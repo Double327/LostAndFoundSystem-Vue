@@ -50,20 +50,7 @@
 							</li>
 						</ul>
 					</div>
-					<div class="page-num">
-						<a class="page-num-item prev" @click="prevPage">上一页</a>
-						<a href="" class="page-num-item current">1</a>
-						<a href="" class="page-num-item">2</a>
-						<a href="" class="page-num-item">3</a>
-						<a href="" class="page-num-item">4</a>
-						<a href="" class="page-num-item">5</a>
-						<a href="" class="page-num-item">6</a>
-						<a href="" class="page-num-item">7</a>
-						<a href="" class="page-num-item">8</a>
-						<a href="" class="page-num-item">9</a>
-						<a href="" class="page-num-item">10</a>
-						<a class="page-num-item next" @click="nextPage">下一页</a>
-					</div>
+
 				</div>
 			</div>
 		</div>

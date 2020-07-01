@@ -6,7 +6,7 @@
 			</div>
 			<div class="notification-body">
 				<div class="notification-img">
-					<img alt="" src="img/avatar.jpg">
+					<img alt="" src="../../assets/img/avatar.jpg">
 				</div>
 				<div class="notification-content">
 					<p class="text">通知系统该如何设计，才能减少或者避免掉用户的反感，获得较好的效果呢？ 在网站和手机上，通知无处不在。通知的设计目的原本是为了提升我们产品的用户体验和一般可用...</p>
@@ -20,7 +20,7 @@
 			</div>
 			<div class="notification-body">
 				<div class="notification-img">
-					<img alt="" src="img/avatar.jpg">
+					<img alt="" src="../../assets/img/avatar.jpg">
 				</div>
 				<div class="notification-content">
 					<p class="text">通知系统该如何设计，才能减少或者避免掉用户的反感，获得较好的效果呢？ 在网站和手机上，通知无处不在。通知的设计目的原本是为了提升我们产品的用户体验和一般可用...</p>
@@ -34,7 +34,7 @@
 			</div>
 			<div class="notification-body">
 				<div class="notification-img">
-					<img alt="" src="img/avatar.jpg">
+					<img alt="" src="../../assets/img/avatar.jpg">
 				</div>
 				<div class="notification-content">
 					<p class="text">通知系统该如何设计，才能减少或者避免掉用户的反感，获得较好的效果呢？ 在网站和手机上，通知无处不在。通知的设计目的原本是为了提升我们产品的用户体验和一般可用...</p>
@@ -48,7 +48,7 @@
 			</div>
 			<div class="notification-body">
 				<div class="notification-img">
-					<img alt="" src="img/avatar.jpg">
+					<img alt="" src="../../assets/img/avatar.jpg">
 				</div>
 				<div class="notification-content">
 					<p class="text">通知系统该如何设计，才能减少或者避免掉用户的反感，获得较好的效果呢？ 在网站和手机上，通知无处不在。通知的设计目的原本是为了提升我们产品的用户体验和一般可用...</p>
@@ -62,7 +62,7 @@
 			</div>
 			<div class="notification-body">
 				<div class="notification-img">
-					<img alt="" src="img/avatar.jpg">
+					<img alt="" src="../../assets/img/avatar.jpg">
 				</div>
 				<div class="notification-content">
 					<p class="text">通知系统该如何设计，才能减少或者避免掉用户的反感，获得较好的效果呢？ 在网站和手机上，通知无处不在。通知的设计目的原本是为了提升我们产品的用户体验和一般可用...</p>
@@ -76,7 +76,7 @@
 			</div>
 			<div class="notification-body">
 				<div class="notification-img">
-					<img alt="" src="img/avatar.jpg">
+					<img alt="" src="../../assets/img/avatar.jpg">
 				</div>
 				<div class="notification-content">
 					<p class="text">通知系统该如何设计，才能减少或者避免掉用户的反感，获得较好的效果呢？ 在网站和手机上，通知无处不在。通知的设计目的原本是为了提升我们产品的用户体验和一般可用...</p>
